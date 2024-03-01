@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Asp Demo 01</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
+    <script src="JavaScript.js"></script>
+</head>
+<body>
+    <h3>Form submit by GET</h3>
+    <form action="https://localhost:7013/registerGet" method="GET">
+        FirstName: <input type="text" name="getFirst" id=""/> <br/>
+        Favorite Color: <input type="text" name="getColor"/> <br/>
+        Age: <input type="text" name="getAge"/> <br/>
+
+        <button type="submit" name="getSubmit">Submit</button>
+
+    </form>
+
+    <hr/>
+    <h3>Form submit by POST</h3>
+    <!-- <form action="https://localhost:7013/registerPost" method="POST"> -->
+        FirstName: <input type="text" id="postFirst"/> <br/>
+        Favorite Color: <input type="text" id="postColor"/> <br/>
+        Age: <input type="text" id="postAge"/> <br/>
+
+        <button type="" id="postSubmit">Submit</button>
+    <!-- </form> -->
+</body>
+</html>
