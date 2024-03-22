@@ -47,7 +47,8 @@ namespace webappsDemo_march22
                                 while (ret.Read())
                                 {
                                     //accesss data using ret["ColumnName"] or ret.GetXXX()
-                                    Console.WriteLine($"{ret["EmployeeID"]}");
+                                    Console.WriteLine($"{ret["EmployeeID"]} | {ret.GetString(1)}");
+                                    //now can return the data in json format or in html format
                                 }
                             }
                                 try
