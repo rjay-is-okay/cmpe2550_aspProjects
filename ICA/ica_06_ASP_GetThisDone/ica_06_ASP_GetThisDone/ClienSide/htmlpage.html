@@ -2,9 +2,58 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>ICA 06 ASP</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
+    <script src="JavaScript.js"></script>
+    <link rel="stylesheet" href="StyleSheet.css">
 </head>
 <body>
+    <h1><img src="logo/2560px-Tim_Hortons_logo.svg.png" alt="Tim Hortons Logo"><p>Welcome To Time Hortons</p></h1>
 
+    <h2>Select The location</h2>
+
+    <select name="location" id="loc">
+        <option value="naitCat">Nait Campus</option>
+        <option value="kingsway">Kingsway</option>
+        <option value="southgate">Southgate</option>
+        <option value="ct">Calgary Trail</option>
+      </select>
+
+      <h2>Select your items from the Menu</h2>
+
+      <div>
+        <ol>
+            <li>Muffins: $2.29</li>
+            <li>Croissants: $2.19</li>
+            <li>Cookie: $1.49</li>
+            <li>Iced Coffee: $2.49</li>
+            <li>Pumpkin Spice Iced Capp: $4.29</li>
+            <li>Caramel Toffee cold Brew: $3.99</li>
+        </ol>
+      </div>
+      
+      <div>
+          <h3>Order Processing</h3>
+          <p>Name:</p>
+          <input id="givedName" type="text" placeholder="Name">
+          <p>Item Ordered:</p>
+          <select name="payment" id="pay">
+              <option value="2.29">Muffins: $2.29</option>
+              <option value="2.19">Croissants: $2.19</option>
+              <option value="1.49">Cookie: $1.49</option>
+              <option value="2.49">Iced Coffee: $2.49</option>
+              <option value="4.29">Pumpkin Spice Iced Capp: $4.29</option>
+              <option value="3.99">Caramel Toffee cold Brew: $3.99</option>
+          </select>
+          <p>How many items:</p>
+          <input type="text" name="amount" id="amount">
+          <p>How would you like to pay [credit/debit/cash]:</p>
+          <select name="payment" id="pay">
+              <option value="cred">Credit</option>
+              <option value="deb">Debit</option>
+              <option value="cash">Cash</option>
+          </select>
+
+      </div>
 </body>
 </html>
