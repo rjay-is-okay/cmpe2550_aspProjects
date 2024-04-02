@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rwatson31\\Documents\\aspProjects_2250\\demo_attempt2\\demo_attempt2\\demo_attempt2.csproj",
+      "projectUniqueName": "C:\\Users\\Rwatson31\\Documents\\CMPE_2550_AspProjects\\cmpe2550_aspProjects\\Demos\\demo_attempt2\\demo_attempt2\\demo_attempt2.csproj",
       "projectName": "demo_attempt2",
-      "projectPath": "C:\\Users\\Rwatson31\\Documents\\aspProjects_2250\\demo_attempt2\\demo_attempt2\\demo_attempt2.csproj",
+      "projectPath": "C:\\Users\\Rwatson31\\Documents\\CMPE_2550_AspProjects\\cmpe2550_aspProjects\\Demos\\demo_attempt2\\demo_attempt2\\demo_attempt2.csproj",
       "packagesPath": "C:\\Users\\Rwatson31\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rwatson31\\Documents\\aspProjects_2250\\demo_attempt2\\demo_attempt2\\obj\\",
+      "outputPath": "C:\\Users\\Rwatson31\\Documents\\CMPE_2550_AspProjects\\cmpe2550_aspProjects\\Demos\\demo_attempt2\\demo_attempt2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -37,14 +37,14 @@ namespace demo_attempt2
                 //process the inputs
                 //everything else you want to do
                 int timeToProcess = 45;
-                double[] marks = {2.5,4.7 };
+                double[] marks = {2.5,4.7};
 
                 return new
                 {
                     FirstName = sub.postFirst,
                     Color = sub.postColor,
                     age = sub.postAge,
-                    timeToProcess = timeToProcess,
+                    TimeToProcess = timeToProcess,
                     Marks = marks
                 };
             

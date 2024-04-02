@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ica_06_ASP_GetThisDone/1.0.0": {
+        "runtime": {
+          "ica_06_ASP_GetThisDone.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ica_06_ASP_GetThisDone/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

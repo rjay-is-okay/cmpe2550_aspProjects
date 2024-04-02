@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ica_06_ASP_GetThisDone.props" />
+</Project>

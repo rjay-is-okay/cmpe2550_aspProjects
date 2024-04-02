@@ -34,6 +34,7 @@ function AJAX(url,method,data,dataType,successMethod,errorMethod){
     ajaxOptions['error'] = errorMethod;
     ajaxOptions['contentType'] = "application/json"; //new for c#
 
+    console.log(ajaxOptions);
     $.ajax(ajaxOptions);
 }
 
