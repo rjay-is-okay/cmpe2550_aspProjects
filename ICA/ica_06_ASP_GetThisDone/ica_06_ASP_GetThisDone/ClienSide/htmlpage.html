@@ -13,10 +13,10 @@
     <h2>Select The location</h2>
 
     <select name="location" id="loc">
-        <option value="naitCat">Nait Campus</option>
-        <option value="kingsway">Kingsway</option>
-        <option value="southgate">Southgate</option>
-        <option value="ct">Calgary Trail</option>
+        <option value="Nait Cat">Nait Campus</option>
+        <option value="Kingsway">Kingsway</option>
+        <option value="Southgate">Southgate</option>
+        <option value="Calgary Trail">Calgary Trail</option>
       </select>
 
       <h2>Select your items from the Menu</h2>
@@ -37,23 +37,27 @@
           <p>Name:</p>
           <input id="givedName" type="text" placeholder="Name">
           <p>Item Ordered:</p>
-          <select name="payment" id="pay">
-              <option value="2.29">Muffins: $2.29</option>
-              <option value="2.19">Croissants: $2.19</option>
-              <option value="1.49">Cookie: $1.49</option>
-              <option value="2.49">Iced Coffee: $2.49</option>
-              <option value="4.29">Pumpkin Spice Iced Capp: $4.29</option>
-              <option value="3.99">Caramel Toffee cold Brew: $3.99</option>
+          <select name="choice" id="choice">
+              <option value="Muffins">Muffins: $2.29</option>
+              <option value="Croissants">Croissants: $2.19</option>
+              <option value="Cookie">Cookie: $1.49</option>
+              <option value="Iced Coffee">Iced Coffee: $2.49</option>
+              <option value="Pumpkin Spice Iced Capp">Pumpkin Spice Iced Capp: $4.29</option>
+              <option value="Caramel Toffee cold Brew">Caramel Toffee cold Brew: $3.99</option>
           </select>
           <p>How many items:</p>
-          <input type="text" name="amount" id="amount">
+          <input type="number" name="amount" id="amount">
           <p>How would you like to pay [credit/debit/cash]:</p>
           <select name="payment" id="pay">
-              <option value="cred">Credit</option>
-              <option value="deb">Debit</option>
-              <option value="cash">Cash</option>
+              <option value="Credit">Credit</option>
+              <option value="Debit">Debit</option>
+              <option value="Cash">Cash</option>
           </select>
-
+          <br>
+          <input type="button" value="Place Order" id="placed">
+          <div id="orderDetails">
+            
+          </div>
       </div>
 </body>
 </html>

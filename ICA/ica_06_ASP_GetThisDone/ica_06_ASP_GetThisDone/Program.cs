@@ -1,7 +1,15 @@
+using System.Text.RegularExpressions;
+
 namespace ica_06_ASP_GetThisDone
 {
     public class Program
     {
+        // To sanitize your inputs
+        public static string CleanInputs(string input)
+        {
+            //input  = Regex.Replace(input.Trim(), "<.*?>|&.*?;", string.Empty);
+            return Regex.Replace(input.Trim(), "<.*?>|&.*?;", string.Empty).Trim();
+        }
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -19,20 +27,23 @@ namespace ica_06_ASP_GetThisDone
 
             //uncomment this for use with json dta
             app.MapPost("/registerPost", (Info sub) => {
+                Random rnd = new Random();
                 //process the inputs
                 //everything else you want to do
-                int timeToProcess = 45;
+                int timeToProcess = rnd.Next(5,31);
                 double[] marks = { 2.5, 4.7 };
-
+                
                 return new
                 {
-                    Name = sub.postName,
-                    ItenOrdered = sub.postItem,
-                    Quantity = sub.postQuantity,
-                    PaymentType = sub.postPayType,
-                    Location = sub.postLocation,
-                    TimeToProcess = timeToProcess
-                    //Marks = marks
+
+                    Name = CleanInputs(sub.postName),
+                    Location = "Pick up Location: "+ CleanInputs(sub.postLocation),
+                    ItemOrdered = "Item Ordered: " + CleanInputs(sub.postItem),
+                    Quantity = "Number of Items: " +CleanInputs(sub.postQuantity),
+                    PaymentType = "Method of Payment: "+CleanInputs(sub.postPayType),
+                    Time = timeToProcess
+
+                    //TimeToProcess = timeToProcess
                 };
 
             });
