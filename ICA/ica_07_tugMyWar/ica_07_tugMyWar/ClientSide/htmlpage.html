@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+﻿<!--<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>ICA 07 Tug O' War</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="JavaScript.js"></script>
     <link rel="stylesheet" href="StyleSheet.css">
 </head>
@@ -20,5 +20,42 @@
             <input type="button" value="Quit Game" id="quitG">
         </div>
     </main>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICA 07 Tug O' War</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="JavaScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+</head>
+<body>
+    <header>
+        <h1>Asp CMPE2550 - Assignment 0 7 - Tug O' War</h1>
+    </header>
+    <main>
+        <form action="index.php" method="POST">
+            <div id="Players">
+                <span id="communication">Please Enter your names</span><br>
+                <span takenby="player1">&#9679</span><input type="text" placeholder="Player 1 Name" name="player1" class="player" value=""><span takenby="player1">&#9679</span>
+                <span takenby="player2">&#9679</span><input type="text" placeholder="Player 2 Name" name="player2" class="player" value=""><span takenby="player2">&#9679</span><br>
+
+                <input type="submit" value="New Game" name="nuGame" id="newG">
+                <input type="submit" value="Quit Game" name="nuGame" id="reseti">
+            </div>
+        </form>
+        <hr>
+
+        <div id="gameBoard">
+
+        </div>
+
+    </main>
+
+    <footer><p>&#169 2023 Ryan Watson</p></footer>
 </body>
 </html>

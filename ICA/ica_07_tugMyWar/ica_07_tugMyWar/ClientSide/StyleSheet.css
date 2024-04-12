@@ -1,6 +1,49 @@
-﻿body {
+﻿main {
+    text-align: center;
+    align-items: center;
+    border: 2px peru solid;
+    border-radius: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-img{
-    width: 300px;
+hr {
+    color: black;
+}
+
+form {
+    border: 3px tomato dotted;
+    margin-top: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#gameBoard {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+    /* height: 150px; */
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+footer, h1 {
+    text-align: center;
+}
+
+.onBoard {
+    display: inline;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    text-align: center;
+}
+
+[takenby='player1'] {
+    color: brown;
+}
+
+[takenby='player2'] {
+    color: burlywood;
 }

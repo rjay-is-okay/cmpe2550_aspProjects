@@ -1,0 +1,6 @@
+C:\Users\Rwatson31\Documents\CMPE_2550_AspProjects\cmpe2550_aspProjects\Demos\april12th_demo\april12th_demo\obj\Debug\net6.0\april12th_demo.csproj.AssemblyReference.cache
+C:\Users\Rwatson31\Documents\CMPE_2550_AspProjects\cmpe2550_aspProjects\Demos\april12th_demo\april12th_demo\obj\Debug\net6.0\april12th_demo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rwatson31\Documents\CMPE_2550_AspProjects\cmpe2550_aspProjects\Demos\april12th_demo\april12th_demo\obj\Debug\net6.0\april12th_demo.AssemblyInfoInputs.cache
+C:\Users\Rwatson31\Documents\CMPE_2550_AspProjects\cmpe2550_aspProjects\Demos\april12th_demo\april12th_demo\obj\Debug\net6.0\april12th_demo.AssemblyInfo.cs
+C:\Users\Rwatson31\Documents\CMPE_2550_AspProjects\cmpe2550_aspProjects\Demos\april12th_demo\april12th_demo\obj\Debug\net6.0\april12th_demo.csproj.CoreCompileInputs.cache
+C:\Users\Rwatson31\Documents\CMPE_2550_AspProjects\cmpe2550_aspProjects\Demos\april12th_demo\april12th_demo\obj\Debug\net6.0\april12th_demo.MvcApplicationPartsAssemblyInfo.cache
