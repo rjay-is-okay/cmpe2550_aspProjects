@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ica_07_tugMyWar.props" />
+</Project>

@@ -1,22 +1,19 @@
 ﻿$().ready(()=>{
     console.log("On Load");
-
-    $("#placed").on("click",postSubmit);
+    postResume();
+    $("#newG").on("click", postStart);
+    $("#reseti").on("click", postQuit);
 })
 
-function postSubmit(){
-    console.log("post submit clicked");
+function postStart(){
+    console.log("post Start clicked");
 
-    let url = "https://localhost:7180/registerPost";
+    let url = "https://localhost:7107/startNewGame";
 
     let data = {};
 
-    data.postName = $("#givedName").val();
-    data.postItem = $("#choice").val();
-    data.postQuantity = $("#amount").val();
-    data.postPayType = $("#pay").val();
-    data.postLocation = $("#loc").val();
-
+    data.postPlay1 = $("#player1").val();
+    data.postPlay2 = $("#player2").val();
 
     console.log(data);
 
@@ -24,7 +21,43 @@ function postSubmit(){
     //AJAX(url, "POST", data, "html", ProcessSuccess, ProcessError);
 
     //uncomment the following to test it for json
-    AJAX(url, "POST", data, "json", ProcessSuccess, ProcessError);
+    AJAX(url, "POST", data, "json", ProcessStart, ProcessError);
+}
+
+function postResume() {
+    console.log("post resume activated");
+
+    let url = "https://localhost:7107/resume";
+
+    let data = {};
+
+    data.postPlay1 = $("#player1").val();
+    data.postPlay2 = $("#player2").val();
+
+    console.log(data);
+
+    //uncomment the following to test it for html
+    //AJAX(url, "POST", data, "html", ProcessSuccess, ProcessError);
+
+    //uncomment the following to test it for json
+    AJAX(url, "POST", data, "json", ProcessResume, ProcessError);
+}
+
+function postQuit() {
+    console.log("post quit activated");
+    $("#communication").html("Please Enter your names");
+
+    let url = "https://localhost:7107/quitGame";
+
+    let data = {};
+
+    console.log(data);
+
+    //uncomment the following to test it for html
+    //AJAX(url, "POST", data, "html", ProcessSuccess, ProcessError);
+
+    //uncomment the following to test it for json
+    AJAX(url, "POST", data, "json", processQuit, ProcessError);
 }
 
 function AJAX(url,method,data,dataType,successMethod,errorMethod){
@@ -41,32 +74,115 @@ function AJAX(url,method,data,dataType,successMethod,errorMethod){
     $.ajax(ajaxOptions);
 }
 
-function ProcessSuccess(returnedData, status){
+function ProcessResume(returnedData,status) {
     console.log("Success Ajax call");
     console.log(returnedData);
-    let newDiv = $("#orderDetails");
-    $(newDiv).empty();
-    let nameHeader = document.createElement("h3");
-    $(nameHeader).append(`Thank you ${returnedData.name} for placing this order.`);
 
-    let newList = document.createElement("ol");
-    $.each((returnedData),(index,key) => {
-        console.log(index);
-        console.log(key);
-        let newOption = document.createElement("li");
-        $(newOption).append(key);
-        if (index != "name" && index != "time") {
-            $(newList).append(newOption);
+    $("#player1").val(returnedData.player1);
+    $("#player2").val(returnedData.player2);
+
+    if (returnedData.player1 != "" && returnedData.player2 != "") {
+        $("#communication").html("Continue On");
+        createBoard();
+        $("img").css("grid-column-start", returnedData.location);
+        if (returnedData.gameState != "neither") {
+            $("#pull").remove();
+            $("#communication").html(returnedData.gameState);
         }
-    })
-    let newFoot = document.createElement("p");
-    $(newFoot).append(`Your order will be ready for pick up in ${returnedData.time} minutes.`);
-    $(newDiv).append(nameHeader);
-    $(newDiv).append(newList);
-    $(newDiv).append(newFoot);
+
+    }
 }
 
+function processQuit(returnedData, status) {
+    $("#gameBoard").empty();
+    console.log("Success Ajax call");
+    console.log(returnedData);
+
+    $("#player1").val(returnedData.player1);
+    $("#player2").val(returnedData.player2);
+}
+
+function ProcessStart(returnedData, status){
+    console.log("Success Ajax call");
+    console.log(returnedData);
+
+    if (returnedData.start) {
+        $("#gameBoard").empty();
+        $("#communication").html("Let's go");
+        createBoard();
+
+    } else {
+        $("#communication").html("Both names must be valid");
+        $("#gameBoard").empty();
+    }
+
+
+}
+
+function PostTug() {
+    console.log("post tug activated");
+
+    let url = "https://localhost:7107/registerMove";
+
+    let data = {};
+
+    console.log(data);
+
+    //uncomment the following to test it for html
+    //AJAX(url, "POST", data, "html", ProcessSuccess, ProcessError);
+
+    //uncomment the following to test it for json
+    AJAX(url, "POST", data, "json", processTug, ProcessError);
+}
+
+function processTug(returnedData, status) {
+
+    $("img").css("grid-column-start", returnedData.location);
+    if (returnedData.gameState != "neither") {
+        $("#communication").html(returnedData.gameState);
+        $("#pull").remove();
+    }
+}
 function ProcessError(returnedData, status){
     console.log("Error Ajax call");
     console.log(returnedData);
+}
+
+function createBoard() {
+    var newDiv = document.createElement("div");
+    $(newDiv).prop("class", "detailedDiv");
+    $(newDiv).prop("id", "topDiv");
+    for (var i = 1; i < 66; i++) {
+        const newSpan = document.createElement("span");
+        newSpan.innerHTML = i;
+        $(newDiv).append(newSpan);
+    }
+    $("#gameBoard").append(newDiv);
+    //var newPara = document.createElement("div"); 
+    var newImg = document.createElement("img");
+
+    newDiv = document.createElement("div");
+    $(newDiv).prop("class", "detailedDiv");
+    $(newDiv).prop("id", "botDiv");
+
+    newImg.src = "images/tug_o_war.jpg";
+    //newPara.append(newImg);
+    $("#gameBoard").append(newImg);
+
+    for (var i = 1; i < 66; i++) {
+        const newSpan = document.createElement("span");
+        newSpan.innerHTML = i;
+        $(newDiv).append(newSpan);
+    }
+    $("#gameBoard").append(newDiv);
+    var newButt = document.createElement("button");
+    newDiv = document.createElement("div");
+    $(newDiv).prop("class", "detailedDiv");
+
+    $(newButt).prop("id", "pull");
+    $(newButt).val("PULL");
+    $(newButt).html("PULLLLLL");
+    $(newDiv).append(newButt);
+    $("#gameBoard").append(newDiv);
+    $(newButt).on("click", PostTug);
 }

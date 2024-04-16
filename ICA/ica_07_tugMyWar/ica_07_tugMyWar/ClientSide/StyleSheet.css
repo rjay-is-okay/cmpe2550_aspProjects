@@ -18,15 +18,6 @@ form {
     margin-right: 25%;
 }
 
-#gameBoard {
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
-    grid-template-rows: repeat(8,1fr);
-    /* height: 150px; */
-    width: 400px;
-    margin-bottom: 30px;
-}
 
 footer, h1 {
     text-align: center;
@@ -46,4 +37,44 @@ footer, h1 {
 
 [takenby='player2'] {
     color: burlywood;
+}
+
+img{
+    width: 300px;
+  grid-column-start:33;
+  /*grid-column-end:35;*/
+  grid-row-start:2;
+  grid-row-end:4;
+}
+
+.detailedDiv{
+    grid-column-start:1;
+    grid-column-end:65;
+}
+#topDiv{
+    grid-row-start:1;
+    grid-row-end:2;
+}
+#botDiv{
+    grid-row-start:4;
+    grid-row-end:5;
+}
+span{
+    width:;
+    border: 1px solid blue;
+}
+#gameBoard,#botDiv,#topDiv{
+    display:grid;
+    grid-template-columns: repeat(65, 1fr);
+
+}
+
+#gameBoard {
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+}
+
+#pull{
+    grid-row-start:5;
+    grid-column-start:31;
+    grid-column-end:35;
 }
