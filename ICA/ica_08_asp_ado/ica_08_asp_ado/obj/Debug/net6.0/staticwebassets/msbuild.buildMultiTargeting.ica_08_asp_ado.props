@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ica_08_asp_ado.props" />
+</Project>

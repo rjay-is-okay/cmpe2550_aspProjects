@@ -1,0 +1,122 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICA_05 mySQL Data Insertion</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="Javascript.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="datafinding.css">-->
+</head>
+<body>
+    <header>
+        <h1>
+            ICA 08 Ryan Watson INSERT THAT DATA!!!
+        </h1>
+    </header>
+    <div>
+        <table>
+            <tr>
+                <th>Get Books</th>
+                <th>Author Id</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Phone</th>
+            </tr>
+            <!-- This will pull all data from the publishers db and inject a new row with an input button, and data into the cells -->
+            <!--<?php
+            mySQLConnection();
+            $totalRecords = 0;
+            $query = "select *";
+            $query .= "from authors";
+
+            if(!($results = mySelectQuery($query))){
+            echo "selecton query failed or has no results";
+
+            } else {
+            while($row = $results->fetch_assoc()){
+            $filledRow = "
+            <tr>
+                <td><input type='button' id='".$row[' au_id']."' class='retrieve' value='Retrieval'></td>"; //continue to add into this and then echo it to add each row with filled data and a buttton input
+                $filledRow = $filledRow. "
+                <td>". $row['au_id']. "</td>";
+                $filledRow = $filledRow. "
+                <td>". $row['au_fname']. "</td>";
+                $filledRow = $filledRow. "
+                <td>". $row['au_lname']. "</td>";
+                $filledRow = $filledRow. "
+                <td>". $row['phone']. "</td>
+            </tr>";
+
+            $totalRecords++;
+            echo $filledRow;
+            }
+            }
+            ?>-->
+        </table>
+    </div>
+    <!--<?php
+    echo  "<aside id='centerThis'>Retreived: ".$totalRecords." author records</aside>";
+    ?>-->
+    <div id="foundThem">
+
+    </div>
+    <div>
+        <p><b>Title ID:</b><input type="text" maxlength=6 id="NewTID"></p>
+        <p><b>Title:</b><input type="text" maxlength=80 id="NewTitle"></p>
+        <p>
+            <b>Type:</b><!--<?php
+            mySQLConnection();
+            echo("<select id='NewType'>
+                ");
+                if(!($results = mySelectQuery("CALL getTypes(1)"))){ //needs single quotes for text values
+                echo "selecton query failed or has no results";
+                } else {
+                while($row = $results->fetch_assoc()){
+                echo("
+                <option value='".$row[' type']."'>".$row['type']."</option>");
+                }
+                }
+                echo("
+            </select>");
+            ?>-->
+        </p>
+        <p><b>Price:</b><input type="text" id="NewPrice"></p>
+        <p>
+            <b>Author(s):</b><!--<?php
+            mySQLConnection();
+            echo("<select id='newAuthors' multiple='multiple'>
+                ");
+                if(!($results = mySelectQuery("CALL getAuthors()"))){ //needs single quotes for text values
+                echo "selecton query failed or has no results";
+                } else {
+                while($row = $results->fetch_assoc()){
+                echo("
+                <option value='".$row[' au_id']."'>".$row['au_lname'].', '.$row['au_fname']."</option>");
+                }
+                }
+                echo("
+            </select>");
+            ?>-->
+        </p>
+        <input type="button" value="Add Book" id="ADD_BOOK">
+        <p id="returnedINFO"></p>
+    </div>
+    <aside id='foundBooks'></aside>
+    <footer><p id='centerThis'> Last modified:
+    <script></script></p><p id='centerThis'>&#169 Ryan Watson 2024</p> </footer>
+</body>
+</html>
+
+<!-- Ideas to self for insertion; have to obtain multiple authors and make title author disp
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
