@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6x9/Fur/fNbQV/a3lI52I3FHEaemzSkhnS5aCH+mv734IWLy1DKNhcxNE/3APJwP4OhCPVOcpNdFhni6hATI8w==",
+  "dgSpecHash": "qVVJ7GxyVgj7lvi1MsEb4Wk7+x+joBoixOs/Z2C/DkfVv7gAx+7qOHXuHM6KWKuNL7tFDw9a1twE8WMmveq37w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ryanw\\OneDrive\\Documents\\CMPE_2300_OOP\\coursework-rjay-is-okay\\icas\\ica_08_asp_ado\\ica_08_asp_ado\\ica_08_asp_ado.csproj",
+  "projectFilePath": "C:\\Users\\ryanw\\OneDrive\\Documents\\cmpe2550_aspProjects\\cmpe2550_aspProjects\\ICA\\ica_08_asp_ado\\ica_08_asp_ado\\ica_08_asp_ado.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ryanw\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ryanw\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

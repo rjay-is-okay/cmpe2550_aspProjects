@@ -2015,11 +2015,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ryanw\\OneDrive\\Documents\\CMPE_2300_OOP\\coursework-rjay-is-okay\\icas\\ica_08_asp_ado\\ica_08_asp_ado\\ica_08_asp_ado.csproj",
+      "projectUniqueName": "C:\\Users\\ryanw\\OneDrive\\Documents\\cmpe2550_aspProjects\\cmpe2550_aspProjects\\ICA\\ica_08_asp_ado\\ica_08_asp_ado\\ica_08_asp_ado.csproj",
       "projectName": "ica_08_asp_ado",
-      "projectPath": "C:\\Users\\ryanw\\OneDrive\\Documents\\CMPE_2300_OOP\\coursework-rjay-is-okay\\icas\\ica_08_asp_ado\\ica_08_asp_ado\\ica_08_asp_ado.csproj",
+      "projectPath": "C:\\Users\\ryanw\\OneDrive\\Documents\\cmpe2550_aspProjects\\cmpe2550_aspProjects\\ICA\\ica_08_asp_ado\\ica_08_asp_ado\\ica_08_asp_ado.csproj",
       "packagesPath": "C:\\Users\\ryanw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ryanw\\OneDrive\\Documents\\CMPE_2300_OOP\\coursework-rjay-is-okay\\icas\\ica_08_asp_ado\\ica_08_asp_ado\\obj\\",
+      "outputPath": "C:\\Users\\ryanw\\OneDrive\\Documents\\cmpe2550_aspProjects\\cmpe2550_aspProjects\\ICA\\ica_08_asp_ado\\ica_08_asp_ado\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

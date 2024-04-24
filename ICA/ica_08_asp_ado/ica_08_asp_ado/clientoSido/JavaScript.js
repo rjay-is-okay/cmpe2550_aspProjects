@@ -77,7 +77,18 @@ function AJAX(url, method, data, dataType, successMethod, errorMethod) {
 function ProcessResume(returnedData, status) {
     console.log("Success Ajax call");
     console.log(returnedData);
+    $.each(returnedData, (index, key) => {
+        var newRow = document.createElement("tr");
+        console.log(index, key);
+        $.each(key, (newdex, newkey) => {
+            var newData = document.createElement("td");
+            $(newData).append(newkey);
+            console.log(newdex, newkey);
+            $(newRow).append(newData);
+        })
+        $("#givenFo").append(newRow);
 
+    })
     //$("#player1").val(returnedData.player1);
     //$("#player2").val(returnedData.player2);
 

@@ -61,7 +61,7 @@ namespace ica_08_asp_ado
 
                         // With Parameters Uncomment the following to test it with parameters
 
-                        string query = "select * from Students s where s.first_name like 'e%' or s.first_name like 'f%'";
+                        string query = "select * from Students s where s.first_name like 'e%' or s.first_name like 'f%' order by s.first_name asc";
 
 
                         // You can use SqlCommand class to execute SQL queries
@@ -84,7 +84,7 @@ namespace ica_08_asp_ado
                                     // Access data using reader["ColumnName"] or reader.GetXXX() methods
                                     Console.WriteLine($"{reader["first_name"]} |  {reader.GetString(1)} |  {reader.GetString(2)} | {reader["school_id"]}");
                                     // Return the data in JSON Format back to user
-                                    string[] data = { reader["student_id"].ToString(), reader["school_id"].ToString(), reader["first_name"].ToString() };
+                                    string[] data = { reader["student_id"].ToString(), reader["first_name"].ToString(), reader["last_name"].ToString(), reader["school_id"].ToString() };
                                     fullset.Add(data);
                                 }
                                 string jsonString = JsonSerializer.Serialize(fullset);
